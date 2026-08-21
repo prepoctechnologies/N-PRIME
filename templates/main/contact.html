@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact NPrime Solutions — Get In Touch{% endblock %}
+
+{% block content %}
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <nav>
+      <a href="{% url 'main:home' %}">Home</a> &rsaquo; Contact
+    </nav>
+    <h1>Contact Us</h1>
+    <p>We're here to help. Reach out and one of our expert advisors will respond promptly.</p>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="section-pad bg-light">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div class="contact-grid">
+
+      <!-- Left — Info -->
+      <div class="contact-info-card fade-up">
+        <h3>Office Information</h3>
+        <p class="sub">Available Monday–Friday, 9AM–6PM. We respond to all enquiries within one business day.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <div class="contact-detail-label">Phone</div>
+            <div class="contact-detail-val">+91 9037 544018</div>
+            <div class="contact-detail-val" style="font-size:13px;color:rgba(255,255,255,.5);margin-top:2px;">+91 9567 251261</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-val">nprimesolution@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <div class="contact-detail-label">Office Address</div>
+            <div class="contact-detail-val">Indus Avenue, 5th Floor, Pushpa Junction</div>
+            <div class="contact-detail-val" style="font-size:13px;color:rgba(255,255,255,.5);margin-top:2px;">Kozhikode, Chalappuram P.O.<br>673002, Kerala, India</div>
+          </div>
+        </div>
+
+        <div class="social-row" style="margin-top:28px;">
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://instagram.com/Nprime_solutions" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Right — Form + Map -->
+      <div class="contact-right fade-up delay-2">
+
+        <div class="map-placeholder" style="margin-bottom:28px;">
+          <iframe
+            src="https://maps.google.com/maps?q=Indus%20Avenue,%20Pushpa%20Junction,%20Kozhikode,%20Kerala%20673002&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="NPrime Solutions Location">
+          </iframe>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <h4>Send Us a Message</h4>
+          <p>Fill in the form below and we'll get back to you within one business day.</p>
+
+          {% if contact_success %}
+          <div class="alert-success" style="margin-bottom:20px;">
+            <i class="fa-solid fa-circle-check" style="font-size:20px;"></i>
+            <div>
+              <strong>Message sent successfully!</strong>
+              We'll get back to you within one business day.
+            </div>
+          </div>
+          {% endif %}
+
+          <form method="post">
+            {% csrf_token %}
+
+            <div class="form-row">
+              <div class="form-group">
+                {{ contact_form.name.label_tag }}
+                {{ contact_form.name }}
+              </div>
+              <div class="form-group">
+                {{ contact_form.email.label_tag }}
+                {{ contact_form.email }}
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                {{ contact_form.phone.label_tag }}
+                {{ contact_form.phone }}
+              </div>
+              <div class="form-group">
+                {{ contact_form.subject.label_tag }}
+                {{ contact_form.subject }}
+              </div>
+            </div>
+
+            <div class="form-group">
+              {{ contact_form.message.label_tag }}
+              {{ contact_form.message }}
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn-primary">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Quick Links / Extra CTA -->
+<section style="background:var(--navy);padding:64px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px 24px;text-align:center;">
+        <i class="fa-solid fa-calendar-check" style="font-size:32px;color:var(--gold);margin-bottom:14px;display:block;"></i>
+        <h4 style="font-family:'Poppins',sans-serif;color:#fff;font-size:15px;margin-bottom:8px;">Book a Consultation</h4>
+        <p style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:16px;">Schedule a free, no-obligation session with our advisors.</p>
+        <a href="{% url 'main:home' %}#consultation" class="btn-gold" style="font-size:13px;padding:10px 20px;">Book Now</a>
+      </div>
+
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px 24px;text-align:center;">
+        <i class="fa-solid fa-phone" style="font-size:32px;color:var(--blue);margin-bottom:14px;display:block;"></i>
+        <h4 style="font-family:'Poppins',sans-serif;color:#fff;font-size:15px;margin-bottom:8px;">Call Us Directly</h4>
+        <p style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:16px;">Speak with an expert right away — available 9AM–6PM.</p>
+        <a href="tel:+18006774631" class="btn-primary" style="font-size:13px;padding:10px 20px;">+1 (800) 677-4631</a>
+      </div>
+
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px 24px;text-align:center;">
+        <i class="fa-solid fa-layer-group" style="font-size:32px;color:var(--gold);margin-bottom:14px;display:block;"></i>
+        <h4 style="font-family:'Poppins',sans-serif;color:#fff;font-size:15px;margin-bottom:8px;">Explore Services</h4>
+        <p style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:16px;">Browse our full range of business service offerings.</p>
+        <a href="{% url 'main:services' %}" class="btn-outline-white" style="font-size:13px;padding:10px 20px;">View All Services</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

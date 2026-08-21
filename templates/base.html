@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NPrime Solutions provides expert insurance policy sales, B2B & B2C consultancy, financing & mortgage assistance, real estate marketing, and relocation services." />
+  <title>{% block title %}NPrime Solutions — Insurance, Finance & Business Services{% endblock %}</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=9" />
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<!-- ======= HEADER ======= -->
+<header class="site-header" id="site-header">
+  <div class="navbar-inner">
+
+    <a href="{% url 'main:home' %}" class="navbar-logo">
+      <img src="{% static 'images/nprime_logo_black.png' %}" alt="NPrime Logo" style="height: 45px; width: auto;" />
+    </a>
+
+    <nav class="navbar-nav">
+      <a href="{% url 'main:home' %}" {% if page == 'home' %}class="active"{% endif %}>Home</a>
+      <a href="{% url 'main:about' %}" {% if page == 'about' %}class="active"{% endif %}>About</a>
+      <a href="{% url 'main:services' %}" {% if page == 'services' %}class="active"{% endif %}>Services</a>
+      <a href="{% url 'main:contact' %}" {% if page == 'contact' %}class="active"{% endif %}>Contact</a>
+    </nav>
+
+    <div class="navbar-cta">
+      <a href="{% url 'main:home' %}#consultation" class="btn-primary">
+        <i class="fa-solid fa-calendar-check"></i> Free Consultation
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div><!-- /navbar-inner -->
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="{% url 'main:home' %}">Home</a>
+    <a href="{% url 'main:about' %}">About</a>
+    <a href="{% url 'main:services' %}">Services</a>
+    <a href="{% url 'main:contact' %}">Contact</a>
+    <a href="{% url 'main:home' %}#consultation" class="btn-primary" style="justify-content:center;margin-top:8px;">
+      <i class="fa-solid fa-calendar-check"></i> Free Consultation
+    </a>
+  </nav>
+</header>
+<!-- /HEADER -->
+
+{% block content %}{% endblock %}
+
+<!-- ======= FOOTER ======= -->
+<footer class="site-footer">
+  <div class="footer-top">
+
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="{% static 'images/nprime_logo_white.png' %}" alt="NPrime Logo" style="height: 45px; width: auto;" />
+      </div>
+      <p>Your trusted partner for insurance, financing, real estate, relocation, and strategic business consultancy. We deliver results you can count on.</p>
+      <div class="social-row">
+        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/Nprime_solutions" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul class="footer-links">
+        <li><a href="{% url 'main:home' %}"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Home</a></li>
+        <li><a href="{% url 'main:about' %}"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> About Us</a></li>
+        <li><a href="{% url 'main:services' %}"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Services</a></li>
+        <li><a href="{% url 'main:contact' %}"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Contact</a></li>
+        <li><a href="{% url 'main:home' %}#consultation"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Free Consultation</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Our Services</h5>
+      <ul class="footer-links">
+        <li><a href="{% url 'main:services' %}"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Insurance Policy Sales</a></li>
+        <li><a href="{% url 'main:services' %}"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Consultancy (B2B & B2C)</a></li>
+        <li><a href="{% url 'main:services' %}"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Financing & Mortgage</a></li>
+        <li><a href="{% url 'main:services' %}"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Real Estate Marketing</a></li>
+        <li><a href="{% url 'main:services' %}"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Relocation & Concierge</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contact Us</h5>
+      <div class="footer-contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 9037 544018, +91 9567 251261</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>nprimesolution@gmail.com</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Indus Avenue, 5th Floor, Pushpa Junction<br>Kozhikode, Chalappuram P.O.<br>673002, Kerala, India</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa-regular fa-clock"></i>
+        <span>Mon–Sat: 9AM – 6PM IST</span>
+      </div>
+    </div>
+
+  </div><!-- /footer-top -->
+
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; {% now "Y" %} NPrime Solutions. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+<!-- /FOOTER -->
+
+<!-- Scripts -->
+<script src="{% static 'js/main.js' %}"></script>
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>

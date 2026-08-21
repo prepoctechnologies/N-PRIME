@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Our Services — NPrime Solutions{% endblock %}
+
+{% block content %}
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <nav>
+      <a href="{% url 'main:home' %}">Home</a> &rsaquo; Services
+    </nav>
+    <h1>Our Services</h1>
+    <p>Comprehensive, expert business solutions for individuals and organisations — delivered with professionalism and care.</p>
+  </div>
+</section>
+
+
+<!-- SERVICES LIST -->
+<section class="section-pad bg-light">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div class="text-center fade-up" style="margin-bottom:56px;">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Five Core Service Areas</h2>
+      <span class="gold-line" style="margin:0 auto;"></span>
+    </div>
+
+    <!-- Service 1 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:48px 0;border-bottom:1px solid var(--border);">
+      <div class="fade-up">
+        <div style="width:64px;height:64px;background:rgba(14,165,233,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--blue);margin-bottom:22px;"><i class="fa-solid fa-shield-halved"></i></div>
+        <span class="section-label">Service 01</span>
+        <h3 style="font-size:1.6rem;font-weight:700;color:var(--navy);margin-bottom:14px;">Insurance Policy Sales</h3>
+        <p style="color:var(--muted);line-height:1.9;margin-bottom:18px;">
+          We help individuals and businesses identify, compare, and secure the most appropriate insurance policies.
+          From personal life and health insurance to business liability and commercial property coverage,
+          our advisors guide you through every option so you choose with confidence.
+        </p>
+        <ul style="margin:0 0 24px 0;display:flex;flex-direction:column;gap:10px;">
+          {% for item in "1234"|make_list %}
+          <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);">
+            <i class="fa-solid fa-circle-check" style="color:var(--blue);font-size:16px;"></i>
+            {% if item == "1" %}Life &amp; Health Insurance
+            {% elif item == "2" %}Business &amp; Liability Coverage
+            {% elif item == "3" %}Property &amp; Asset Insurance
+            {% else %}Policy Review &amp; Renewal Support
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        <a href="{% url 'main:home' %}#consultation" class="btn-primary">
+          <i class="fa-solid fa-calendar-check"></i> Enquire About Insurance
+        </a>
+      </div>
+      <div class="fade-up delay-2">
+        <div style="background:var(--navy);border-radius:16px;padding:36px;height:100%;min-height:280px;display:flex;flex-direction:column;justify-content:center;gap:20px;">
+          <div style="color:rgba(255,255,255,.7);font-size:14px;line-height:1.85;">
+            "NPrime Solutions identified gaps in our existing insurance setup that we had missed. Their guidance saved our company significant costs while improving our coverage."
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;">JM</div>
+            <div>
+              <div style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:#fff;">James Mitchell</div>
+              <div style="font-size:12px;color:rgba(255,255,255,.5);">Operations Director, TechStart Ltd.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:48px 0;border-bottom:1px solid var(--border);">
+      <div class="fade-up delay-1" style="order:2;">
+        <div style="background:var(--bg);border-radius:16px;padding:36px;border:1px solid var(--border);">
+          <div style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--blue);margin-bottom:20px;text-transform:uppercase;letter-spacing:.08em;">Consultancy Areas</div>
+          {% for area in "12345"|make_list %}
+          <div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);">
+            <i class="fa-solid fa-angle-right" style="color:var(--gold);"></i>
+            <span style="font-size:14px;color:var(--text);font-weight:500;">
+              {% if area == "1" %}Business Strategy &amp; Planning
+              {% elif area == "2" %}Operational Efficiency
+              {% elif area == "3" %}Market Entry Advisory
+              {% elif area == "4" %}Financial Planning
+              {% else %}Personal Financial Consultancy
+              {% endif %}
+            </span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="fade-up" style="order:1;">
+        <div style="width:64px;height:64px;background:rgba(245,158,11,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--gold);margin-bottom:22px;"><i class="fa-solid fa-handshake"></i></div>
+        <span class="section-label">Service 02</span>
+        <h3 style="font-size:1.6rem;font-weight:700;color:var(--navy);margin-bottom:14px;">Consultancy Services (B2B &amp; B2C)</h3>
+        <p style="color:var(--muted);line-height:1.9;margin-bottom:24px;">
+          Our consultancy team provides strategic and operational advisory services to both businesses and individuals.
+          Whether you need help scaling your company, navigating a complex financial decision, or planning your
+          personal financial future — our advisors bring real-world expertise to the table.
+        </p>
+        <a href="{% url 'main:home' %}#consultation" class="btn-primary">
+          <i class="fa-solid fa-calendar-check"></i> Book a Consultation
+        </a>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:48px 0;border-bottom:1px solid var(--border);">
+      <div class="fade-up">
+        <div style="width:64px;height:64px;background:rgba(14,165,233,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--blue);margin-bottom:22px;"><i class="fa-solid fa-landmark"></i></div>
+        <span class="section-label">Service 03</span>
+        <h3 style="font-size:1.6rem;font-weight:700;color:var(--navy);margin-bottom:14px;">Financing &amp; Mortgage Assistance</h3>
+        <p style="color:var(--muted);line-height:1.9;margin-bottom:18px;">
+          We simplify the financing process — whether you're buying your first home, refinancing an existing mortgage,
+          or securing a business loan. Our team evaluates your financial position, compares products from our lender network,
+          and handles the entire application process from start to finish.
+        </p>
+        <ul style="margin:0 0 24px 0;display:flex;flex-direction:column;gap:10px;">
+          {% for i in "123"|make_list %}
+          <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);">
+            <i class="fa-solid fa-circle-check" style="color:var(--blue);font-size:16px;"></i>
+            {% if i == "1" %}Residential &amp; Commercial Mortgages
+            {% elif i == "2" %}Business &amp; Personal Loans
+            {% else %}Refinancing &amp; Debt Restructuring
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        <a href="{% url 'main:home' %}#consultation" class="btn-primary">
+          <i class="fa-solid fa-calendar-check"></i> Discuss Financing Options
+        </a>
+      </div>
+      <div class="fade-up delay-2">
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:36px;">
+          <div style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:20px;">Why use a mortgage advisor?</div>
+          {% for r in "123"|make_list %}
+          <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;">
+            <div style="width:32px;height:32px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;flex-shrink:0;"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <div style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:3px;">
+                {% if r == "1" %}Access to exclusive rates
+                {% elif r == "2" %}Save time on paperwork
+                {% else %}Avoid costly mistakes
+                {% endif %}
+              </div>
+              <div style="font-size:13px;color:var(--muted);">
+                {% if r == "1" %}We negotiate on your behalf with our lender network.
+                {% elif r == "2" %}We manage the entire application process.
+                {% else %}Our experts ensure your application is solid.
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 4 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:48px 0;border-bottom:1px solid var(--border);">
+      <div class="fade-up delay-2" style="order:2;">
+        <div style="background:var(--navy);border-radius:16px;padding:36px;display:flex;flex-direction:column;gap:18px;">
+          {% for s in "123"|make_list %}
+          <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;background:rgba(255,255,255,.05);border-radius:10px;border:1px solid rgba(255,255,255,.08);">
+            <i class="fa-solid {% if s == '1' %}fa-bullhorn{% elif s == '2' %}fa-chart-line{% else %}fa-image{% endif %}" style="color:var(--gold);font-size:20px;"></i>
+            <div>
+              <div style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:#fff;margin-bottom:2px;">
+                {% if s == "1" %}Property Marketing Campaigns
+                {% elif s == "2" %}Brand Positioning &amp; Strategy
+                {% else %}Photography &amp; Content Production
+                {% endif %}
+              </div>
+              <div style="font-size:12px;color:rgba(255,255,255,.5);">
+                {% if s == "1" %}Digital, print, and social media exposure
+                {% elif s == "2" %}Define and elevate your project identity
+                {% else %}High-quality visual assets that sell
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="fade-up" style="order:1;">
+        <div style="width:64px;height:64px;background:rgba(16,185,129,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;color:#10B981;margin-bottom:22px;"><i class="fa-solid fa-building-columns"></i></div>
+        <span class="section-label">Service 04</span>
+        <h3 style="font-size:1.6rem;font-weight:700;color:var(--navy);margin-bottom:14px;">Real Estate Marketing &amp; Branding</h3>
+        <p style="color:var(--muted);line-height:1.9;margin-bottom:24px;">
+          We design and execute comprehensive marketing and branding strategies for real estate developers, agents,
+          and private sellers. Our team builds compelling property narratives and distributes them across
+          the right channels to maximise visibility, enquiries, and sale value.
+        </p>
+        <a href="{% url 'main:home' %}#consultation" class="btn-primary">
+          <i class="fa-solid fa-calendar-check"></i> Enquire About Real Estate
+        </a>
+      </div>
+    </div>
+
+    <!-- Service 5 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:48px 0;">
+      <div class="fade-up">
+        <div style="width:64px;height:64px;background:rgba(239,68,68,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;color:#EF4444;margin-bottom:22px;"><i class="fa-solid fa-plane-departure"></i></div>
+        <span class="section-label">Service 05</span>
+        <h3 style="font-size:1.6rem;font-weight:700;color:var(--navy);margin-bottom:14px;">Relocation &amp; Concierge Services</h3>
+        <p style="color:var(--muted);line-height:1.9;margin-bottom:18px;">
+          Relocating is one of life's most complex events. NPrime's relocation team manages every aspect —
+          from finding the right home and arranging logistics, to school search, utility setup, and
+          community integration — so you and your family can settle in without the stress.
+        </p>
+        <ul style="margin:0 0 24px 0;display:flex;flex-direction:column;gap:10px;">
+          {% for i in "1234"|make_list %}
+          <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);">
+            <i class="fa-solid fa-circle-check" style="color:var(--blue);font-size:16px;"></i>
+            {% if i == "1" %}Pre-move planning &amp; logistics
+            {% elif i == "2" %}Housing &amp; school search
+            {% elif i == "3" %}Utility &amp; admin setup
+            {% else %}Ongoing concierge support
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        <a href="{% url 'main:home' %}#consultation" class="btn-primary">
+          <i class="fa-solid fa-calendar-check"></i> Plan Your Relocation
+        </a>
+      </div>
+      <div class="fade-up delay-2">
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:36px;">
+          <div style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:18px;">Relocation Checklist</div>
+          {% for step in "12345"|make_list %}
+          <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);">
+            <div style="width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">{{ step }}</div>
+            <span style="font-size:13.5px;color:var(--text);">
+              {% if step == "1" %}Define requirements &amp; timeline
+              {% elif step == "2" %}Housing &amp; neighbourhood search
+              {% elif step == "3" %}Logistics &amp; moving coordination
+              {% elif step == "4" %}Schools, utilities &amp; registrations
+              {% else %}Settling-in &amp; community support
+              {% endif %}
+            </span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section style="background:var(--navy);padding:72px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;text-align:center;">
+    <h2 style="color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px;">Ready to Get Started?</h2>
+    <p style="color:rgba(255,255,255,.6);margin-bottom:32px;">
+      Book a free consultation today — no obligation, just clear expert guidance.
+    </p>
+    <a href="{% url 'main:home' %}#consultation" class="btn-gold">
+      <i class="fa-solid fa-calendar-check"></i> Book Free Consultation
+    </a>
+  </div>
+</section>
+
+{% endblock %}

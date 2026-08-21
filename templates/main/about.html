@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About NPrime Solutions — Our Story, Mission & Team{% endblock %}
+
+{% block content %}
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <nav>
+      <a href="{% url 'main:home' %}">Home</a> &rsaquo; About Us
+    </nav>
+    <h1>About NPrime Solutions</h1>
+    <p>Trusted advisors helping individuals and businesses navigate insurance, finance, real estate, and more.</p>
+  </div>
+</section>
+
+
+<!-- ABOUT INTRO -->
+<section class="section-pad bg-white">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+
+      <div class="fade-up">
+        <span class="section-label">Our Company</span>
+        <h2 class="section-title">Who We Are</h2>
+        <span class="gold-line"></span>
+        <p style="color:var(--muted);line-height:1.9;margin-bottom:20px;font-size:15.5px;">
+          NPrime Solutions is a professional business services firm dedicated to helping individuals and
+          organisations make informed, confident decisions across insurance, financing, real estate, relocation,
+          and strategic consultancy.
+        </p>
+        <p style="color:var(--muted);line-height:1.9;margin-bottom:28px;font-size:15.5px;">
+          Founded on the principles of transparency, expertise, and genuine client care, we serve both B2B and B2C
+          clients — bringing the same level of professionalism and commitment to every engagement regardless of size.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="{% url 'main:services' %}" class="btn-primary">
+            <i class="fa-solid fa-layer-group"></i> Our Services
+          </a>
+          <a href="{% url 'main:contact' %}" class="btn-gold">
+            <i class="fa-solid fa-comments"></i> Contact Us
+          </a>
+        </div>
+      </div>
+
+      <div class="fade-up delay-2">
+        <div style="background:var(--bg);border-radius:16px;padding:36px;border:1px solid var(--border);">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+            {% for item in values %}{% endfor %}
+            <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:24px 20px;">
+              <div style="font-size:28px;color:var(--blue);margin-bottom:10px;"><i class="fa-solid fa-bullseye"></i></div>
+              <div style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;">Our Mission</div>
+              <div style="font-size:13px;color:var(--muted);line-height:1.75;">To deliver honest, expert, and personalised business solutions that create real outcomes for our clients.</div>
+            </div>
+            <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:24px 20px;">
+              <div style="font-size:28px;color:var(--gold);margin-bottom:10px;"><i class="fa-solid fa-eye"></i></div>
+              <div style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;">Our Vision</div>
+              <div style="font-size:13px;color:var(--muted);line-height:1.75;">To be the most trusted business solutions partner for individuals and organisations across the region.</div>
+            </div>
+            <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:24px 20px;">
+              <div style="font-size:28px;color:var(--blue);margin-bottom:10px;"><i class="fa-solid fa-handshake"></i></div>
+              <div style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;">Our Values</div>
+              <div style="font-size:13px;color:var(--muted);line-height:1.75;">Integrity, transparency, expertise, and a genuine commitment to every client's best interests.</div>
+            </div>
+            <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:24px 20px;">
+              <div style="font-size:28px;color:var(--gold);margin-bottom:10px;"><i class="fa-solid fa-users"></i></div>
+              <div style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;">Our Team</div>
+              <div style="font-size:13px;color:var(--muted);line-height:1.75;">Qualified professionals with deep expertise across insurance, finance, real estate, and consultancy.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- EXPERTISE -->
+<section class="section-pad bg-light">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div class="text-center fade-up">
+      <span class="section-label">Our Expertise</span>
+      <h2 class="section-title">What Sets Us Apart</h2>
+      <span class="gold-line" style="margin:0 auto 20px;"></span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px;">
+      {% for feat in features %}{% endfor %}
+
+      {% for f in "1234"|make_list %}
+      {% if f == "1" %}
+      <div class="fade-up delay-1" style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px 24px;text-align:center;">
+        <div style="width:56px;height:56px;background:rgba(14,165,233,.08);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px;color:var(--blue);"><i class="fa-solid fa-certificate"></i></div>
+        <h4 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;">10+ Years Experience</h4>
+        <p style="font-size:13px;color:var(--muted);line-height:1.75;">Over a decade of serving clients across multiple industries with professional excellence.</p>
+      </div>
+      {% elif f == "2" %}
+      <div class="fade-up delay-2" style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px 24px;text-align:center;">
+        <div style="width:56px;height:56px;background:rgba(245,158,11,.08);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px;color:var(--gold);"><i class="fa-solid fa-award"></i></div>
+        <h4 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;">Certified Advisors</h4>
+        <p style="font-size:13px;color:var(--muted);line-height:1.75;">Qualified and industry-certified professionals across every service area we offer.</p>
+      </div>
+      {% elif f == "3" %}
+      <div class="fade-up delay-3" style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px 24px;text-align:center;">
+        <div style="width:56px;height:56px;background:rgba(14,165,233,.08);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px;color:var(--blue);"><i class="fa-solid fa-globe"></i></div>
+        <h4 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;">Wide Partner Network</h4>
+        <p style="font-size:13px;color:var(--muted);line-height:1.75;">An extensive network of insurers, lenders, real estate agents, and service providers.</p>
+      </div>
+      {% else %}
+      <div class="fade-up delay-4" style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px 24px;text-align:center;">
+        <div style="width:56px;height:56px;background:rgba(245,158,11,.08);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px;color:var(--gold);"><i class="fa-solid fa-chart-line"></i></div>
+        <h4 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;">Proven Track Record</h4>
+        <p style="font-size:13px;color:var(--muted);line-height:1.75;">Over 1,000 clients served with a 98% satisfaction rate across all services.</p>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section style="background:var(--navy);padding:72px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;text-align:center;">
+    <h2 style="color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px;">Ready to Work With Us?</h2>
+    <p style="color:rgba(255,255,255,.6);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;">
+      Schedule a free, no-obligation consultation with one of our expert advisors today.
+    </p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="{% url 'main:home' %}#consultation" class="btn-gold">
+        <i class="fa-solid fa-calendar-check"></i> Book Free Consultation
+      </a>
+      <a href="{% url 'main:contact' %}" class="btn-outline-white">
+        <i class="fa-solid fa-envelope"></i> Send a Message
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

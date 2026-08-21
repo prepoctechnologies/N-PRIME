@@ -1,0 +1,729 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}NPrime Solutions — Insurance, Finance & Business Solutions{% endblock %}
+
+{% block content %}
+
+<!-- ================================================
+     HERO
+     ================================================ -->
+<section class="hero" id="home">
+  <div class="hero-image-bg"></div>
+  <div class="hero-bg-overlay"></div>
+
+  <div class="hero-inner">
+    <!-- Left -->
+    <div class="hero-left">
+      <div class="hero-pill">
+        <i class="fa-solid fa-circle-check"></i>
+        Trusted Business Solutions Partner
+      </div>
+
+      <h1 class="hero-title">
+        Your Trusted Partner for <span>Insurance, Finance</span> &amp; Business Solutions
+      </h1>
+
+      <p class="hero-sub">
+        NPrime Solutions provides expert support in insurance policy sales, consultancy, financing,
+        real estate marketing, relocation, and concierge services — delivering results with precision.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#consultation" class="btn-gold">
+          <i class="fa-solid fa-calendar-check"></i> Book Free Consultation
+        </a>
+        <a href="#callback" class="btn-outline-white">
+          <i class="fa-solid fa-phone"></i> Request Callback
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span data-count="1000">0</span>+</div>
+          <div class="hero-stat-lbl">Clients Served</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span data-count="500">0</span>+</div>
+          <div class="hero-stat-lbl">Consultations</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span data-count="98">0</span>%</div>
+          <div class="hero-stat-lbl">Satisfaction</div>
+        </div>
+      </div>
+    </div><!-- /hero-left -->
+
+
+  </div><!-- /hero-inner -->
+</section><!-- /hero -->
+
+
+<!-- ================================================
+     TRUST BAR
+     ================================================ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <i class="fa-solid fa-circle-check"></i>
+      Licensed &amp; Regulated
+    </div>
+    <div class="trust-item">
+      <i class="fa-solid fa-circle-check"></i>
+      10+ Years of Experience
+    </div>
+    <div class="trust-item">
+      <i class="fa-solid fa-circle-check"></i>
+      B2B &amp; B2C Services
+    </div>
+    <div class="trust-item">
+      <i class="fa-solid fa-circle-check"></i>
+      Nationwide Coverage
+    </div>
+    <div class="trust-item">
+      <i class="fa-solid fa-circle-check"></i>
+      98% Client Satisfaction
+    </div>
+  </div>
+</div>
+
+
+<!-- ================================================
+     SERVICES SECTION
+     ================================================ -->
+<section class="section-pad bg-light" id="services">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div class="text-center fade-up">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Our Core Services</h2>
+      <span class="gold-line" style="margin:0 auto 20px;"></span>
+      <p class="section-sub" style="margin:0 auto;">
+        From insurance and finance to real estate and relocation — we offer comprehensive,
+        personalized solutions for businesses and individuals alike.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card fade-up delay-1">
+        <div class="service-icon-wrap">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3>Insurance Policy Sales</h3>
+        <p>Helping individuals and businesses find the right insurance policies — from life and health to property, liability, and commercial coverage.</p>
+        <a href="{% url 'main:services' %}" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card fade-up delay-2">
+        <div class="service-icon-wrap">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <h3>Consultancy Services</h3>
+        <p>Strategic B2B and B2C consulting — delivering actionable insights, business planning, and advisory support tailored to your unique objectives.</p>
+        <a href="{% url 'main:services' %}" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card fade-up delay-3">
+        <div class="service-icon-wrap">
+          <i class="fa-solid fa-landmark"></i>
+        </div>
+        <h3>Financing &amp; Mortgage Assistance</h3>
+        <p>End-to-end guidance on mortgages, business loans, and financing options — connecting you with trusted lenders and securing the best terms.</p>
+        <a href="{% url 'main:services' %}" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card fade-up delay-1">
+        <div class="service-icon-wrap">
+          <i class="fa-solid fa-building-columns"></i>
+        </div>
+        <h3>Real Estate Marketing &amp; Branding</h3>
+        <p>Premium marketing and branding solutions for real estate projects — increasing property visibility, generating leads, and driving value.</p>
+        <a href="{% url 'main:services' %}" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card fade-up delay-2">
+        <div class="service-icon-wrap">
+          <i class="fa-solid fa-plane-departure"></i>
+        </div>
+        <h3>Relocation &amp; Concierge Services</h3>
+        <p>Personalized relocation assistance — from logistics and housing to settling-in support, school search, and everyday concierge services.</p>
+        <a href="{% url 'main:services' %}" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card fade-up delay-3" style="background:var(--navy);border-color:var(--navy);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;">
+        <h3 style="color:#fff;margin-bottom:14px;">Not Sure Which Service?</h3>
+        <p style="color:rgba(255,255,255,.6);margin-bottom:24px;">Talk to our team and we'll guide you to the right solution for your needs.</p>
+        <a href="{% url 'main:contact' %}" class="btn-gold" style="font-size:13px;padding:11px 22px;">
+          <i class="fa-solid fa-comments"></i> Talk to an Expert
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     WHY CHOOSE US
+     ================================================ -->
+<section class="section-pad bg-navy" id="about">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div class="fade-up">
+      <span class="section-label">Our Advantage</span>
+      <h2 class="section-title light">Why Clients Choose NPrime Solutions</h2>
+      <span class="gold-line"></span>
+      <p class="section-sub light">
+        We combine expertise, honesty, and a client-first approach to deliver outcomes
+        that genuinely improve lives and businesses.
+      </p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card fade-up delay-1">
+        <div class="why-card-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <h4>Experienced Professionals</h4>
+        <p>Our advisors bring deep domain knowledge across insurance, finance, real estate, and consultancy to every engagement.</p>
+      </div>
+
+      <div class="why-card fade-up delay-2">
+        <div class="why-card-icon"><i class="fa-solid fa-sliders"></i></div>
+        <h4>Personalized Solutions</h4>
+        <p>We take time to understand your specific goals and craft a solution that fits — not a generic off-the-shelf package.</p>
+      </div>
+
+      <div class="why-card fade-up delay-3">
+        <div class="why-card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h4>Transparent Guidance</h4>
+        <p>Clear communication, honest advice, and full transparency at every step of the process — no hidden agendas.</p>
+      </div>
+
+      <div class="why-card fade-up delay-1">
+        <div class="why-card-icon"><i class="fa-solid fa-rotate"></i></div>
+        <h4>End-to-End Support</h4>
+        <p>From the first consultation to final execution and beyond, we stay with you as your trusted long-term partner.</p>
+      </div>
+
+      <div class="why-card fade-up delay-2">
+        <div class="why-card-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h4>Fast Response</h4>
+        <p>We value your time. Our team responds promptly and moves efficiently so you never experience unnecessary delays.</p>
+      </div>
+
+      <div class="why-card fade-up delay-3">
+        <div class="why-card-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <h4>Trusted Network</h4>
+        <p>Access our broad network of vetted lenders, insurers, real estate professionals, and service providers for the best outcomes.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     HOW WE WORK
+     ================================================ -->
+<section class="section-pad bg-light">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div class="text-center fade-up">
+      <span class="section-label">Our Process</span>
+      <h2 class="section-title">How We Work</h2>
+      <span class="gold-line" style="margin:0 auto 20px;"></span>
+      <p class="section-sub" style="margin:0 auto;">
+        A structured, transparent process — designed to keep you informed and confident at every stage.
+      </p>
+    </div>
+
+    <div class="steps-row">
+
+      <div class="step-item fade-up delay-1">
+        <div class="step-number">1</div>
+        <h4>Consultation</h4>
+        <p>We begin with an in-depth discussion to fully understand your situation, goals, and requirements.</p>
+      </div>
+
+      <div class="step-item fade-up delay-2">
+        <div class="step-number">2</div>
+        <h4>Requirement Review</h4>
+        <p>We analyse your needs and identify the most suitable service pathway and action plan.</p>
+      </div>
+
+      <div class="step-item fade-up delay-3">
+        <div class="step-number">3</div>
+        <h4>Documentation &amp; Processing</h4>
+        <p>We guide you through all paperwork, coordinate with partners, and manage the process from start to finish.</p>
+      </div>
+
+      <div class="step-item fade-up delay-4">
+        <div class="step-number">4</div>
+        <h4>Completion &amp; Support</h4>
+        <p>We deliver results and remain available for ongoing support, follow-up, and future needs.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     STATISTICS
+     ================================================ -->
+<section class="stats-section">
+  <div class="stats-grid">
+
+    <div class="stat-box fade-up">
+      <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+      <div class="stat-num"><span data-count="1000">0</span><span>+</span></div>
+      <div class="stat-label">Clients Assisted</div>
+    </div>
+
+    <div class="stat-box fade-up delay-1">
+      <div class="stat-icon"><i class="fa-solid fa-comments"></i></div>
+      <div class="stat-num"><span data-count="500">0</span><span>+</span></div>
+      <div class="stat-label">Successful Consultations</div>
+    </div>
+
+    <div class="stat-box fade-up delay-2">
+      <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+      <div class="stat-num"><span data-count="98">0</span><span>%</span></div>
+      <div class="stat-label">Client Satisfaction Rate</div>
+    </div>
+
+    <div class="stat-box fade-up delay-3">
+      <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+      <div class="stat-num"><span data-count="5">0</span></div>
+      <div class="stat-label">Core Service Areas</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================
+     FREE CONSULTATION FORM
+     ================================================ -->
+<section class="consult-section" id="consultation">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div class="text-center fade-up" style="margin-bottom:0;">
+      <span class="section-label">Get Started</span>
+      <h2 class="section-title">Book a Free Consultation</h2>
+      <span class="gold-line" style="margin:0 auto 12px;"></span>
+      <p class="section-sub" style="margin:0 auto 48px;">
+        Fill in the form below and one of our experts will contact you within 24 hours to schedule your session.
+      </p>
+    </div>
+
+    <div class="consult-wrapper fade-up">
+      <div class="consult-header">
+        <div class="consult-header-icon">
+          <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <div>
+          <h3>Free Consultation Request</h3>
+          <p>Complete the form and we'll reach out within 24 hours.</p>
+        </div>
+      </div>
+
+      <div class="consult-body">
+        {% if consult_success %}
+        <div class="alert-success">
+          <i class="fa-solid fa-circle-check" style="font-size:20px;"></i>
+          <div>
+            <strong>Consultation request received!</strong>
+            Our team will contact you within 24 hours to confirm your appointment.
+          </div>
+        </div>
+        {% endif %}
+
+        <form method="post" action="#consultation">
+          {% csrf_token %}
+          <input type="hidden" name="consultation_submit" value="1" />
+
+          <div class="form-row">
+            <div class="form-group">
+              {{ consult_form.full_name.label_tag }}
+              {{ consult_form.full_name }}
+            </div>
+            <div class="form-group">
+              {{ consult_form.phone.label_tag }}
+              {{ consult_form.phone }}
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              {{ consult_form.email.label_tag }}
+              {{ consult_form.email }}
+            </div>
+            <div class="form-group">
+              {{ consult_form.service.label_tag }}
+              {{ consult_form.service }}
+            </div>
+          </div>
+
+          <div class="form-group">
+            {{ consult_form.message.label_tag }}
+            {{ consult_form.message }}
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-gold">
+              <i class="fa-solid fa-calendar-check"></i> Submit Consultation Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     SERVICE ASSISTANCE PROCESS
+     ================================================ -->
+<section class="process-section">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div class="text-center fade-up">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">Service Assistance Process</h2>
+      <span class="gold-line" style="margin:0 auto 20px;"></span>
+      <p class="section-sub" style="margin:0 auto;">
+        A clear, step-by-step assistance process that ensures every client receives a smooth, professional experience.
+      </p>
+    </div>
+
+    <div class="process-grid">
+
+      <div class="process-card fade-up delay-1">
+        <div class="process-step-num">01</div>
+        <h4>Initial Consultation</h4>
+        <p>We meet to understand your requirements, explain our services, and answer your questions in full.</p>
+      </div>
+
+      <div class="process-card fade-up delay-2">
+        <div class="process-step-num">02</div>
+        <h4>Documentation</h4>
+        <p>We collect and verify all required documents, ensuring everything is accurate and in order.</p>
+      </div>
+
+      <div class="process-card fade-up delay-3">
+        <div class="process-step-num">03</div>
+        <h4>Processing</h4>
+        <p>Our team actively manages your case, coordinating with lenders, insurers, or partners on your behalf.</p>
+      </div>
+
+      <div class="process-card fade-up delay-4">
+        <div class="process-step-num">04</div>
+        <h4>Completion</h4>
+        <p>We complete the process, deliver your outcome, and provide a full handover with continued support.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     TESTIMONIALS
+     ================================================ -->
+<section class="testimonials-section bg-light">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div class="text-center fade-up">
+      <span class="section-label">Client Testimonials</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <span class="gold-line" style="margin:0 auto 20px;"></span>
+      <p class="section-sub" style="margin:0 auto;">
+        Trusted by hundreds of individuals and businesses. Here's what a few of them have to say.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card fade-up delay-1">
+        <div class="testimonial-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "NPrime Solutions completely transformed our corporate insurance coverage. Their team identified gaps
+          we hadn't even noticed and negotiated a significantly better policy. Professional, responsive, and genuinely knowledgeable."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-initials" style="background:#0EA5E9;">SA</div>
+          <div>
+            <div class="author-name">Sarah Anderson</div>
+            <div class="author-role">CEO, Anderson Ventures Ltd.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-up delay-2">
+        <div class="testimonial-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "The mortgage assistance service was outstanding. They guided us through every document,
+          liaised with the lender, and we secured a rate far better than we expected. I'd recommend them to anyone."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-initials" style="background:#F59E0B;">MR</div>
+          <div>
+            <div class="author-name">Michael Rahman</div>
+            <div class="author-role">Property Investor</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-up delay-3">
+        <div class="testimonial-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "Our international relocation was handled flawlessly by NPrime. From housing to school search
+          to settling-in support, nothing was left to chance. My family couldn't have asked for a smoother move."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-initials" style="background:#10B981;">PK</div>
+          <div>
+            <div class="author-name">Priya Krishnan</div>
+            <div class="author-role">Director, Global Enterprises</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FAQ
+     ================================================ -->
+<section class="faq-section" id="faq">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div class="text-center fade-up">
+      <span class="section-label">FAQs</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <span class="gold-line" style="margin:0 auto 20px;"></span>
+      <p class="section-sub" style="margin:0 auto;">
+        Answers to the most common questions about NPrime Solutions and how we work.
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          What services does NPrime Solutions provide?
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">
+            NPrime Solutions offers five core services: Insurance Policy Sales, Consultancy Services (B2B &amp; B2C),
+            Financing &amp; Mortgage Assistance, Real Estate Marketing &amp; Branding, and Relocation &amp; Concierge Services.
+            We serve both individuals and businesses of all sizes.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          How do I book a consultation?
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">
+            Simply fill in the Free Consultation form on this page, call our office directly, or send us an email.
+            Our team typically responds within 24 hours to schedule a session at a time convenient for you —
+            either in person or virtually.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Do you work with businesses and individuals?
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">
+            Yes. NPrime Solutions serves both B2B (business-to-business) and B2C (business-to-consumer) clients.
+            Whether you are a small business owner, a corporate entity, or an individual seeking personal guidance,
+            we have dedicated service teams for each.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          How does the financing and mortgage assistance work?
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">
+            Our financing experts assess your financial profile, identify suitable mortgage or loan products,
+            and connect you with our network of trusted lenders. We handle the negotiations, paperwork, and
+            follow-ups — making the entire process straightforward and stress-free.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          What does the relocation service include?
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">
+            Our relocation service covers pre-move planning, logistics coordination, housing search,
+            school and education advisory, utility setup, community orientation, and ongoing concierge support.
+            We manage every detail so you can focus on settling in with confidence.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     REQUEST CALLBACK
+     ================================================ -->
+<section class="callback-section" id="callback">
+  <div class="callback-inner">
+
+    <div class="callback-text fade-up">
+      <h2>Need Expert Guidance?</h2>
+      <p>Leave your contact details and our team will call you back within 2 business hours.</p>
+      {% if callback_success %}
+      <div class="callback-success" id="callback-alert">
+        <i class="fa-solid fa-circle-check"></i>
+        Callback request received! We'll call you shortly.
+      </div>
+      {% endif %}
+    </div>
+
+    <form method="post" action="#callback" class="fade-up delay-2">
+      {% csrf_token %}
+      <input type="hidden" name="callback_submit" value="1" />
+      <div class="callback-form">
+        <div class="callback-form-group">
+          <label for="id_name">Your Name</label>
+          {{ callback_form.name }}
+        </div>
+        <div class="callback-form-group">
+          <label for="id_phone">Phone Number</label>
+          {{ callback_form.phone }}
+        </div>
+        <div class="callback-form-group">
+          <label for="id_preferred_time">Preferred Time</label>
+          {{ callback_form.preferred_time }}
+        </div>
+        <div style="align-self:flex-end;padding-bottom:0;">
+          <button type="submit" class="btn-gold" style="white-space:nowrap;">
+            <i class="fa-solid fa-phone"></i> Request Callback
+          </button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+
+<!-- ================================================
+     CONTACT & MAP
+     ================================================ -->
+<section class="contact-section" id="contact-preview">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div class="text-center fade-up">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Contact NPrime Solutions</h2>
+      <span class="gold-line" style="margin:0 auto 20px;"></span>
+      <p class="section-sub" style="margin:0 auto;">
+        Reach out to our team. We're available Monday to Friday, 9AM–6PM, and happy to help.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Left — Info -->
+      <div class="contact-info-card fade-up">
+        <h3>Office Information</h3>
+        <p class="sub">We'd love to hear from you. Here's how to reach us.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <div class="contact-detail-label">Phone</div>
+            <div class="contact-detail-val">+91 9037 544018</div>
+            <div class="contact-detail-val" style="font-size:13px;color:rgba(255,255,255,.5);margin-top:2px;">+91 9567 251261</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-val">nprimesolution@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <div class="contact-detail-label">Office Address</div>
+            <div class="contact-detail-val">Indus Avenue, 5th Floor, Pushpa Junction</div>
+            <div class="contact-detail-val" style="font-size:13px;color:rgba(255,255,255,.5);margin-top:2px;">Kozhikode, Chalappuram P.O.<br>673002, Kerala, India</div>
+          </div>
+        </div>
+
+        <div class="social-row" style="margin-top:28px;">
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://instagram.com/Nprime_solutions" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Right — Map + Quick Form -->
+      <div class="contact-right fade-up delay-2">
+        <div class="map-placeholder">
+          <iframe
+            src="https://maps.google.com/maps?q=Indus%20Avenue,%20Pushpa%20Junction,%20Kozhikode,%20Kerala%20673002&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="NPrime Solutions Office Location">
+          </iframe>
+        </div>
+
+        <div class="contact-form-card">
+          <h4>Send Us a Quick Message</h4>
+          <p>For non-urgent enquiries, fill in the form and we'll respond within one business day.</p>
+          <a href="{% url 'main:contact' %}" class="btn-primary" style="font-size:13px;padding:11px 22px;">
+            <i class="fa-solid fa-paper-plane"></i> Go to Full Contact Form
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
